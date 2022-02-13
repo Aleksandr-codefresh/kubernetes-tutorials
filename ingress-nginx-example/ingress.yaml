@@ -4,6 +4,8 @@ metadata:
   name: example-ingress
   labels:
     name: example-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - http:
