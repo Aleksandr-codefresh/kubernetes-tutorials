@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-port-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  selector:
+    k8s-app: kubernetes-dashboard
+  type: NodePort
+  ports:
+  - port: 9090
+    protocol: TCP
+    targetPort: 9090
+    nodePort: 30007
